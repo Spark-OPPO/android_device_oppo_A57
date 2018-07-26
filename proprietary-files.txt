@@ -1,5 +1,6 @@
 # All unpinned blobs below are extracted from A57_11.A.32_0320_201912050917
 # CPH1701 Package version: CPH1701EX_11_A.36_181009
+# R9s Package version: R9s_11.A.53_0530_201904131805
 
 # ACDB - from CPH1701
 system/etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|850d4fa7ba66145bb4efc713d3c2bf78d4ef5df2
@@ -377,8 +378,10 @@ vendor/lib/libmmcamera_isp_chroma_suppress40.so
 vendor/lib/libmmcamera_isp_mce40.so
 vendor/lib/libmmcamera_isp_linearization40.so
 vendor/lib/libmmcamera_isp_template.so
-vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libmmcamera_isp_gamma40.so
+
+# Camera isp - from R9s
+vendor/lib/libmmcamera_isp_color_correct40.so|58307a0452b00aa795715fdee7798baa3598637a
 
 # Fingerprint - FPC - from CPH1701
 system/lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2|41a61bcb6853f997d16f5ddbe47af9216dcd6dce
