@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_16061.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/16061/WCNSS_qcom_wlan_nv.bin \
-    $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_16061_second.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/16061_second/WCNSS_qcom_wlan_nv.bin
+    $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_16061_second.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/16061_second/WCNSS_qcom_wlan_nv.bin \
+    $(DEVICE_PATH)/wifi/WCNSS_qcom_wlan_nv_16361.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/16361/WCNSS_qcom_wlan_nv.bin
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oppo/A57/A57-vendor.mk)

@@ -58,6 +58,8 @@ static const variant_info_t cph1701fw_info = {
 
 static void determine_device() {
     if (ReadProjectVersion() == 16061) {
+        bool isGlobal = false;
+
         switch (ReadOperatorName()) {
             /* China */
             case 8:
@@ -87,6 +89,7 @@ static void determine_device() {
             case 114:
             {
                 std::string reserve_exp1;
+                isGlobal = true;
                 if (ReadFileToString("/dev/block/bootdevice/by-name/reserve_exp1", &reserve_exp1)) {
                     if (!strncmp(reserve_exp1.c_str(), "00010001", 8)) {
                         set_variant_props(cph1701fw_info);
@@ -103,14 +106,30 @@ static void determine_device() {
                 break;
         }
 
-        switch (ReadPcbVersion()) {
-            case 10:
-            case 11:
-                property_override("ro.vendor.wlan_fw_variant", "16061_second");
-                break;
-            default:
-                property_override("ro.vendor.wlan_fw_variant", "16061");
-                break;
+        if (isGlobal) {
+            switch (ReadOperatorName()) {
+                case 106:
+                    property_override("ro.vendor.wlan_fw_variant", "16361");
+                    break;
+                case 102:
+                case 110:
+                case 111:
+                    property_override("ro.vendor.wlan_fw_variant", "16061_second");
+                    break;
+                default: /* 112, 113, 114 */
+                    property_override("ro.vendor.wlan_fw_variant", "16061");
+                    break;
+            }
+        } else {
+            switch (ReadPcbVersion()) {
+                case 10:
+                case 11:
+                    property_override("ro.vendor.wlan_fw_variant", "16061_second");
+                    break;
+                default: /* CN + 112, 113, 114 */
+                    property_override("ro.vendor.wlan_fw_variant", "16061");
+                    break;
+            }
         }
     } else {
         LOG(ERROR) << "Unknown device variant";
