@@ -1,2 +1,5 @@
 # SoC
 ro.soc.model=MSM8940
+
+# USB
+vendor.usb.controller=msm_hsusb
