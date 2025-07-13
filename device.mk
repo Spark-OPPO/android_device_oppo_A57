@@ -30,6 +30,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(DEVICE_PATH)/audio/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
 # Input
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/oppo_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/oppo_touchscreen.kl
