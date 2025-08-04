@@ -23,7 +23,6 @@ static const variant_info_t a57_info = {
     .model = "OPPO A57",
     .build_fingerprint = "OPPO/A57/A57:6.0.1/MMB29M/1527754036:user/release-keys",
     .build_description = "msm8937_64-user 6.0.1 MMB29M eng.root.20191205.095236 dev-keys",
-    .imei_sv = 32,
 };
 
 static const variant_info_t a57t_info = {
@@ -33,7 +32,6 @@ static const variant_info_t a57t_info = {
     .model = "OPPO A57t",
     .build_fingerprint = "OPPO/A57t/A57:6.0.1/MMB29M/1527754036:user/release-keys",
     .build_description = "msm8937_64-user 6.0.1 MMB29M eng.root.20191205.101424 dev-keys",
-    .imei_sv = 22,
 };
 
 static const variant_info_t cph1701_info = {
@@ -43,7 +41,6 @@ static const variant_info_t cph1701_info = {
     .model = "CPH1701",
     .build_fingerprint = "Android/msm8937_64/msm8937_64:6.0.1/MMB29M/root10091402:user/release-keys",
     .build_description = "msm8937_64-user 6.0.1 MMB29M eng.root.20181009.140111 release-keys",
-    .imei_sv = 36,
 };
 
 static const variant_info_t cph1701fw_info = {
@@ -53,7 +50,6 @@ static const variant_info_t cph1701fw_info = {
     .model = "CPH1701fw",
     .build_fingerprint = "Android/msm8937_64/msm8937_64:6.0.1/MMB29M/root10091402:user/release-keys",
     .build_description = "msm8937_64-user 6.0.1 MMB29M eng.root.20181009.140111 release-keys",
-    .imei_sv = 36,
 };
 
 static void determine_device() {
