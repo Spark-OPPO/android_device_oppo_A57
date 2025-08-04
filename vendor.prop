@@ -1,3 +1,7 @@
+# Camera
+persist.camera.gyro.android=0
+persist.camera.gyro.disable=1
+
 # SoC
 ro.soc.model=MSM8940
 
