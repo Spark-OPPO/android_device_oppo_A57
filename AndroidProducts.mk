@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_A57.mk
+    $(LOCAL_DIR)/spark_A57.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_A57-user \
-    lineage_A57-userdebug \
-    lineage_A57-eng
+    spark_A57-user \
+    spark_A57-userdebug \
+    spark_A57-eng
