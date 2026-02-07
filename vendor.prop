@@ -4,6 +4,3 @@ persist.camera.gyro.disable=1
 
 # SoC
 ro.soc.model=MSM8940
-
-# USB
-vendor.usb.controller=msm_hsusb
